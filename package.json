@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "homepage": "https://github.com/macvish/react-native-products-table#readme",
-  "main": "lib/index.js",
+  "main": "src/index.tsx",
   "types": "lib/index.d.ts",
   "author": "Macanthony Ahaotu <macintony1@gmail.com>",
   "license": "MIT",
@@ -63,5 +63,8 @@
       "json",
       "node"
     ]
+  },
+  "dependencies": {
+    "react-native-vector-icons": "^9.2.0"
   }
 }
