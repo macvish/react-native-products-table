@@ -1,6 +1,6 @@
-import { Dimensions, StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native'
 
-const { width } = Dimensions.get('window')
+import metrics from '../../theme/metrics'
 
 const styles = StyleSheet.create({
   container: {
@@ -21,11 +21,11 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     color: '#928D8D8A',
-    width: width / 2,
+    width: metrics.screenWidth / 2,
     textAlign: 'center',
   },
   btn: {
-    width: width / 2,
+    width: metrics.screenWidth / 2,
   },
 })
 

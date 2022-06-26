@@ -3,6 +3,8 @@ const colors = {
   secondary: '#FFD680',
   text: '#14000BCC',
   placeholderText: '#979797',
+  white: '#FFFFFF',
+  black: '#000000',
   grey: '#C4C4C4',
   lightGrey: '#FAFAFB',
   darkGrey: '#CCCCCC',
