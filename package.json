@@ -63,5 +63,8 @@
       "json",
       "node"
     ]
+  },
+  "dependencies": {
+    "react-native-vector-icons": "^9.2.0"
   }
 }

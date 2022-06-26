@@ -5,18 +5,25 @@ import Button from '../Button'
 import styles from './styles'
 
 interface Props {
+  title?: string
+  subtitle?: string
   onPress?: () => void
   buttonStyle?: StyleProp<ViewStyle>
 }
 
-const NoProductPlaceholder: React.FC<Props> = ({ buttonStyle, onPress }) => {
+const NoProductPlaceholder: React.FC<Props> = ({
+  buttonStyle,
+  onPress,
+  subtitle,
+  title,
+}) => {
   return (
     <View style={styles.container}>
       {/* <NoProductIcon /> */}
-      <View style={{ paddingVertical: 20 }}>
-        <Text style={styles.title}>No Products Yet</Text>
+      <View style={styles.textWrapper}>
+        <Text style={styles.title}>{title ?? 'No Products Yet'}</Text>
         <Text style={styles.subtitle}>
-          You don't have any product at the moment.
+          {subtitle ?? "You don't have any product at the moment."}
         </Text>
       </View>
       <Button

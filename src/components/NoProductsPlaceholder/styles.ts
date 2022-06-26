@@ -9,6 +9,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 20,
   },
+  textWrapper: {
+    paddingVertical: 20,
+  },
   title: {
     fontSize: 15,
     fontWeight: 'bold',
