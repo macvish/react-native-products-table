@@ -1,12 +1,7 @@
 import * as React from 'react'
-import {
-  ActivityIndicator,
-  Button,
-  NativeModules,
-  Text,
-  View,
-} from 'react-native'
+import { ActivityIndicator, NativeModules, View } from 'react-native'
 
+import NoProductsPlaceholder from './components/NoProductsPlaceholder'
 import styles from './styles'
 import { Products } from './types'
 
@@ -21,9 +16,22 @@ interface Props {
   loaderColor?: string
 }
 
-export const ProductsTable: React.FC<Props> = ({ isLoading, loaderColor }) => {
+export const ProductsTable: React.FC<Props> = ({
+  isLoading,
+  loaderColor,
+  noProductNavigate,
+  products,
+}) => {
   const renderContent = () => {
-    return <Text>Here</Text>
+    if (products.length > 0) {
+      return <></>
+    }
+
+    return (
+      <NoProductsPlaceholder
+        onPress={() => noProductNavigate && noProductNavigate()}
+      />
+    )
   }
 
   const onLoading = () => {

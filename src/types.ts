@@ -1,5 +1,5 @@
 export interface Products {
-  title: string
+  title?: string
   imageSource?: string
   category?: string
   amount?: number | string

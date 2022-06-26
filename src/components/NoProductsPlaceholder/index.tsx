@@ -11,7 +11,7 @@ interface Props {
   buttonStyle?: StyleProp<ViewStyle>
 }
 
-const NoProductPlaceholder: React.FC<Props> = ({
+const NoProductsPlaceholder: React.FC<Props> = ({
   buttonStyle,
   onPress,
   subtitle,
@@ -35,4 +35,4 @@ const NoProductPlaceholder: React.FC<Props> = ({
   )
 }
 
-export default NoProductPlaceholder
+export default NoProductsPlaceholder
