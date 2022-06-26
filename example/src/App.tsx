@@ -1,12 +1,20 @@
 import React, { useEffect } from 'react'
-import RNProductsTableModule, { Counter } from 'react-native-products-table'
+import RNProductsTableModule, { ProductsTable } from 'react-native-products-table'
+
+const dummyData = [{
+  title: 'Test',
+  imageSource: '',
+  category: 'Electronics',
+  amount: '9000',
+  quantity: 20
+}]
 
 const App = () => {
   useEffect(() => {
     console.log(RNProductsTableModule)
   })
 
-  return <Counter />
+  return <ProductsTable products={dummyData}/>
 }
 
 export default App
