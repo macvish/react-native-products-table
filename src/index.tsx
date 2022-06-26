@@ -20,6 +20,7 @@ interface Props {
   products: Products[]
   label?: string
   noLabel?: boolean
+  onPressProduct?: (item: Products) => void
   noProductNavigate?: () => void
   onSearch?: (value?: string) => void
   onSort?: (value?: string) => void
@@ -37,17 +38,16 @@ export const ProductsTable: React.FC<Props> = ({
   loaderColor,
   noLabel,
   noProductNavigate,
+  onPressProduct,
   products,
 }) => {
   const [data, setData] = React.useState(products)
-
-  const onPressProduct = (item: Products) => {}
 
   const renderProductItem = ({ item, index }: RenderProductItemType) => {
     return (
       <TouchableOpacity
         activeOpacity={0.75}
-        onPress={() => onPressProduct(item)}
+        onPress={() => onPressProduct && onPressProduct(item)}
       >
         <View style={styles.productItem} key={index}>
           <View style={styles.productItemLeftContent}>

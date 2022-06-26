@@ -30,7 +30,10 @@ const App = () => {
     console.log(RNProductsTableModule)
   })
 
-  return <ProductsTable products={dummyData}/>
+  return <ProductsTable
+    products={dummyData}
+    onPressProduct={(data) => console.log(data)}
+  />
 }
 
 export default App
