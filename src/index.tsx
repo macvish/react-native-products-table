@@ -29,7 +29,7 @@ interface Props {
   loaderColor?: string
 }
 
-type RenderProductItemType = { item: Products, index: number }
+type RenderProductItemType = { item: Products; index: number }
 
 export const ProductsTable: React.FC<Props> = ({
   isLoading,
@@ -45,15 +45,18 @@ export const ProductsTable: React.FC<Props> = ({
 
   const renderProductItem = ({ item, index }: RenderProductItemType) => {
     return (
-      <TouchableOpacity activeOpacity={0.75} onPress={() => onPressProduct(item)}>
+      <TouchableOpacity
+        activeOpacity={0.75}
+        onPress={() => onPressProduct(item)}
+      >
         <View style={styles.productItem} key={index}>
           <View style={styles.productItemLeftContent}>
-            <Icon
+            {/* <Icon
               name='eye-outline'
               size={20}
               color='#ADB4BD'
               style={styles.marginRight}
-            />
+            /> */}
             {item.imageSource ? (
               <Image
                 source={{ uri: item.imageSource }}
@@ -76,7 +79,7 @@ export const ProductsTable: React.FC<Props> = ({
             {item?.quantity ? (
               <Text style={styles.quantity}>{item?.quantity}pcs</Text>
             ) : null}
-        </View>
+          </View>
         </View>
       </TouchableOpacity>
     )

@@ -7,6 +7,8 @@ import metrics from './theme/metrics'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 10,
+    paddingHorizontal: 10,
   },
   headerWrapper: {
     flexDirection: 'row',

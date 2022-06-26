@@ -4,5 +4,4 @@ export interface Products {
   category?: string
   amount?: number | string
   quantity?: number
-  isPublic?: boolean
 }
