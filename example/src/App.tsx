@@ -14,7 +14,7 @@ const App = () => {
     console.log(RNProductsTableModule)
   })
 
-  return <ProductsTable products={[]}/>
+  return <ProductsTable products={dummyData}/>
 }
 
 export default App
